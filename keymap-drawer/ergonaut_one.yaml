@@ -38,7 +38,7 @@ layers:
   - /
   - ''
   - {t: ESCAPE, h: settings}
-  - {t: ␣, h: Shift}
+  - {t: ␣, h: Nav}
   - {t: ↹, h: settings}
   - {t: ENTER, h: settings}
   - {t: ⌫, h: Shift}
@@ -81,7 +81,7 @@ layers:
   - INSERT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - ENTER
   - BACKSPACE
