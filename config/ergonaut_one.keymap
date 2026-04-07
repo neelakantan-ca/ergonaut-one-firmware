@@ -12,7 +12,14 @@
 &mt { quick-tap-ms = <200>; };
 
 / {
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        configuration {
+            if-layers = <2 5>;
+            then-layer = <6>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -20,10 +27,10 @@
         Base {
             display-name = "MAIN";
             bindings = <
-&none  &kp Q  &kp W  &kp E         &kp R        &kp T      &kp Y        &kp U           &kp I      &kp O    &kp P     &none
-&none  &kp A  &kp S  &kp D         &kp F        &kp G      &kp H        &kp J           &kp K      &kp L    &kp SEMI  &none
-&none  &kp Z  &kp X  &kp C         &kp V        &kp B      &kp N        &kp M           &kp COMMA  &kp DOT  &kp FSLH  &none
-                     &lt 3 ESCAPE  &lt 2 SPACE  &lt 1 TAB  &lt 3 ENTER  &mt RSHFT BSPC  &lt 3 DEL
+&none  &kp Q  &kp W  &kp E         &kp R        &kp T      &kp Y        &kp U       &kp I      &kp O    &kp P     &none
+&none  &kp A  &kp S  &kp D         &kp F        &kp G      &kp H        &kp J       &kp K      &kp L    &kp SEMI  &none
+&none  &kp Z  &kp X  &kp C         &kp V        &kp B      &kp N        &kp M       &kp COMMA  &kp DOT  &kp FSLH  &none
+                     &lt 3 ESCAPE  &lt 2 SPACE  &lt 1 TAB  &lt 4 ENTER  &lt 5 BSPC  &lt 0 DEL
             >;
 
             label = "base";
@@ -31,24 +38,57 @@
 
         Navigation {
             bindings = <
-&trans  &trans        &trans        &trans     &trans          &trans  &kp K_REDO  &kp K_PASTE    &kp K_COPY    &kp K_CUT  &kp K_UNDO    &trans
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans  &kp LEFT    &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPSLOCK  &trans
-&trans  &trans        &trans        &trans     &trans          &trans  &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp INSERT    &trans
-                                    &trans     &trans          &trans  &kp ENTER   &kp BACKSPACE  &kp DELETE
+&none  &none         &none         &none      &none           &none  &kp K_REDO  &kp K_PASTE    &kp K_COPY    &kp K_CUT  &kp K_UNDO    &none
+&none  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none  &kp LEFT    &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPSLOCK  &none
+&none  &none         &none         &none      &none           &none  &kp HOME    &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp INSERT    &none
+                                   &none      &none           &none  &kp ENTER   &kp BACKSPACE  &kp DELETE
             >;
 
-            label = "Nav";
+            label = "navigation";
         };
 
         Number {
             bindings = <
-&trans  &trans        &trans        &trans     &trans          &trans  &trans     &kp N7        &kp N8        &kp N9        &trans  &trans
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans  &trans     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
-&trans  &trans        &trans        &trans     &trans          &trans  &trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-                                    &trans     &trans          &trans  &kp ENTER  &kp N0        &trans
+&none  &none         &none         &none      &none           &none  &none      &kp N7        &kp N8        &kp N9        &none  &none
+&none  &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none  &none      &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none  &none
+&none  &none         &none         &none      &none           &none  &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
+                                   &none      &none           &none  &kp ENTER  &kp N0        &none
             >;
 
-            label = "nums";
+            label = "numbers";
+        };
+
+        Function {
+            bindings = <
+&none  &none  &none  &none  &none  &none  &kp F12  &kp F7  &kp F8  &kp F9  &none  &none
+&none  &none  &none  &none  &none  &none  &kp F11  &kp F4  &kp F5  &kp F6  &none  &none
+&none  &none  &none  &none  &none  &none  &kp F10  &kp F1  &kp F2  &kp F3  &none  &none
+                     &none  &none  &none  &none    &none   &none
+            >;
+
+            label = "functions";
+        };
+
+        Symbols {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "symbols";
+        };
+
+        Media {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "media";
         };
 
         Settings {
