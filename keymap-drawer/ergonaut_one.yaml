@@ -37,10 +37,10 @@ layers:
   - .
   - /
   - ''
-  - {t: ESCAPE, h: functions}
+  - {t: ESCAPE, h: symbols}
   - {t: ␣, h: numbers}
   - {t: ↹, h: navigation}
-  - {t: ENTER, h: symbols}
+  - {t: ENTER, h: functions}
   - {t: ⌫, h: media}
   - {t: ⌦, h: base}
   navigation:
@@ -129,49 +129,6 @@ layers:
   - ENTER
   - '0'
   - ''
-  functions:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - F12
-  - F7
-  - F8
-  - F9
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - F11
-  - F4
-  - F5
-  - F6
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - F10
-  - F1
-  - F2
-  - F3
-  - ''
-  - ''
-  - {type: held}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   symbols:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -209,12 +166,55 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  functions:
+  - ''
+  - ''
+  - F7
+  - F8
+  - F9
+  - F12
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F4
+  - F5
+  - F6
+  - F11
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F1
+  - F2
+  - F3
+  - F10
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
   media:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -259,45 +259,45 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   settings:
-  - Boot
-  - '&studio_unlock'
-  - ''
-  - ''
-  - ''
-  - ''
   - ''
   - ''
   - ''
   - ''
   - '&studio_unlock'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT CLR ALL
+  - ''
+  - ''
+  - ''
   - Boot
-  - BT CLR
-  - BT 1
-  - BT 2
-  - BT 3
-  - BT 4
+  - ''
+  - ''
+  - BT PRV
   - BT 5
-  - BT 5
-  - BT 4
-  - BT 3
-  - BT 2
-  - BT 1
+  - ''
+  - ''
+  - BT NXT
   - BT CLR
+  - ''
+  - ''
   - Reset
   - ''
   - ''
   - ''
   - ''
+  - BT 2
+  - BT 3
+  - BT 4
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - Reset
+  - {t: BT DISC, h: '0'}
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - ''
-  - {type: held}
+  - {t: BT 1, type: held}
   - {t: ▽, type: trans}
